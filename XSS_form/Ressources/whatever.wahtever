@@ -1,0 +1,5 @@
+http://192.168.1.70/?page=feedback
+
+- Flag : **0fbb54bbf7d099713ca4be297e1bc7da0173d8b3c21c1811b916a3a86652724e**
+- Comment se protéger : Toujours valider les entrées utilisateurs
+- Comment on a trouvé : On a écrit **script** dans le champ Message de ce formulaire.
