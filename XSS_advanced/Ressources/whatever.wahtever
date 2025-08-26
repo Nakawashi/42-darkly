@@ -1,0 +1,10 @@
+
+Flag : 928d819fc19405ae09921a2b71227bd9aba106f9d2d37ac412e9e5a750f1506d
+
+Url : /index.php?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=
+
+Faille : une balise html objet est utilisée qui contient le paramètre src de l'url
+
+Pourquoi c’est sensible : les paramètres comme `page` et `src` sont utilisés directement dans des requêtes SQL sans validation ou échappement approprié. Un attaquant pourrait injecter un paramètre malveillant dans l'URL et provoquer l'exécution d'une commande SQL non désirée.
+
+Comment se protéger : Préférer la méthode POST plutôt que GET pour ne pas afficher les paramètres dans l’url et toujours valider les entrées utilisateurs. Mécanisme d’authentification sur des ressources sensibles. Eviter d'utiliser la balise object et utiliser img à la place. Ne pas afficher les paramètres dans l'url.
