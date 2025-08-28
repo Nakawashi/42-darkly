@@ -79,10 +79,13 @@ First name: 5
 Surname : FlagGetThe424242Decrypt this password -> then lower all the char. Sh256 on it and it's good !5ff9d0165b4f92b14994e5c685cdce28
 ```
 
+## Comment se protéger :
+Nettoyer les inputs provenant des utilisateurs et préparer les requêtes en avance dans le backend avec des ORM comme Hibernate pour Java ou Doctrine pour PHP par exemple.
+
+## Déchiffrer le flag
+
 Et voilà on a la méthode pour trouver le flag:
 déchiffrement de `5ff9d0165b4f92b14994e5c685cdce28` qui était chiffré en MD5 → **FortyTwo**
 lower all the char (comme indiqué)
 chiffrement de `fortytwo` en SHA256→ `10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5`
 
-## Comment se protéger :
-Nettoyer les inputs provenant des utilisateurs et préparer les requêtes en avance dans le backend avec des ORM comme Hibernate pour Java ou Doctrine pour PHP par exemple.

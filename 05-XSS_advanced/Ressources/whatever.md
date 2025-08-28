@@ -1,6 +1,8 @@
 # Cross Site Scripting (XSS) : Reflected XSS via data URL injection.
 
+
 ## URL
+
 `/index.php?page=media&src=nsa`
 
 ## Description
@@ -28,12 +30,16 @@ Le problème vient du fait que le paramètre data (ici `src`) est directement ut
 	- Dans cet exemple, cela a permis de récupérer un **flag**, donc une donnée sensible normalement inaccessible.
 
 ## Se protéger
-Préférer la méthode POST plutôt que GET pour ne pas afficher les paramètres dans l’url et toujours valider les entrées utilisateurs. Mécanisme d’authentification sur des ressources sensibles. Eviter d'utiliser la balise object et utiliser img à la place. Ne pas afficher les paramètres dans l'url.
+
+Préférer la méthode POST plutôt que GET pour ne pas afficher les paramètres dans l’url et toujours valider les entrées utilisateurs. Mécanisme d’authentification sur des ressources sensibles. Eviter d'utiliser la balise object et utiliser img à la place.
 
 ## Reproduire la faille
+
 On a testé d'ajouter un script JS comme paramètre pour voir s'il allait être interprété : `?page=media&src=data:text/html,<script>alert(1)</script>`
 Ce qui confirme que c'est bien le cas, mais pas de flag.
-On chiffre en base64 ce texte pour avoir :
+On encode en base64 ce texte pour avoir :
 `?page=media&src=data:text/html;base64,ICA8c2NyaXB0PiBhbGVydCgxKTwvc2NyaXB0PiAg`
 Pourquoi base64 : ça permet d'avoir des caractères uniformes qui ne vont pas poser problème comme `=` ou `+` par exemple.
 Notre code est exécuté et nous renvoie le flag.
+
+[source Mozilla](https://developer.mozilla.org/fr/docs/web/http/basics_of_http/data_urls)

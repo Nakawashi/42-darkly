@@ -1,15 +1,19 @@
 # SQL Injection
 
+
 ## URL
+
 /index.php?page=searchimg
 
 ## Description
+
 Une attaque par injection SQL consiste à insérer une requête SQL via les données envoyées par le client à l'application. </br>
 Une exploitation réussie permet de lire, modifier ou supprimer des données de la base, d'exécuter des opérations d'administration (comme arrêter le SGBD), d'accéder à des fichiers du système ou, dans certains cas, de lancer des commandes sur le système d'exploitation. Les attaques par injection SQL font partie des attaques par injection, où des commandes SQL sont insérées dans les entrées de données pour affecter l'exécution de commandes SQL prédéfinies.
 Les attaques par injection SQL permettent aux attaquants de falsifier des identités, manipuler des données, annuler des transactions, divulguer ou détruire des données, ou devenir administrateurs du serveur de base de données. Elles sont fréquentes dans les applications PHP et ASP en raison des interfaces fonctionnelles anciennes. Les applications J2EE et ASP.NET sont moins vulnérables. La gravité de ces attaques dépend des compétences de l'attaquant, mais reste généralement élevée, malgré les mesures de défense. </br>
 [Lien OWASP SQL injection](https://owasp.org/www-community/attacks/SQL_Injection)
 
 ## Se protéger
+
 1. Utiliser des requêtes préparées (avec paramètres) : Cette méthode sépare les données du code SQL, empêchant ainsi toute modification malveillante des requêtes.
 2. Recourir à des procédures stockées sécurisées : Elles permettent d'exécuter des commandes SQL prédéfinies de manière sécurisée, à condition qu'elles ne construisent pas dynamiquement des requêtes avec des entrées non sécurisées.
 3. Valider les entrées utilisateur : Appliquer une validation stricte (par exemple, via des listes blanches) pour s'assurer que les données reçues correspondent aux formats attendus, réduisant ainsi le risque d'injection.
@@ -66,6 +70,8 @@ ID: 1 AND 1=2 UNION SELECT id, CONCAT(url, title, comment) FROM list_images
 Title: borntosec.ddns.net/images.pngHack me ?If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
 Url : 5
 ```
+
+## Déchiffrer le flag
 
 Décoder depuis [dcode.fr](https://www.dcode.fr/hash-md5):
 Déchiffrement du hash MD5 `1928e8083cf461a51303633093573c46` : **albatroz**
