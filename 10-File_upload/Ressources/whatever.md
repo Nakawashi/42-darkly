@@ -48,10 +48,9 @@ echo '<?php echo "Ah, ça fonctionne ?"; ?>' > test.php
 
 Et pourquoi pas passer par du curl pour uploader notre fichier et récupérer le flag dans la réponse du serveur :
 ```shell
-curl "http://<IP_ADDRESS>/index.php?page=upload" \
+curl "http://localhost:4242/index.php?page=upload" \
   -F "Upload=Upload" \
-  -F "uploaded=@test.php;type=image/jpeg" \
-  -F "MAX_FILE_SIZE=100000" | grep "flag"
+  -F "uploaded=@test.php;type=image/jpeg"
 ```
 
 **Preuve que nous ne devons pas croire aveuglément les headers des requêtes HTTP reçus.**
