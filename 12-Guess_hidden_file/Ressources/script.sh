@@ -1,6 +1,6 @@
 #!/bin/bash
 
-baseUrl="http://192.168.1.70/.hidden/"
+baseUrl="http://localhost:4242/.hidden/"
 
 chercher_flag(){
     local url="$1"
