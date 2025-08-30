@@ -33,7 +33,12 @@ Via la page /robots.txt qui sert à indiquer aux robots des moteurs de recherche
 ```
 http://localhost:4242/.hidden/
 ```
-Il fallait trouver le flag parmi tout un tas de dossiers et sous-dossiers et fichiers. Un script bash nous a permi de trouver :
+Il fallait trouver le flag parmi tout un tas de dossiers et sous-dossiers et fichiers. 
+
+Executer le script bash pour trouver le flag
+```
+bash script.sh
+```
 FLAG trouvé dans http://192.168.1.70/.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README
 
 [Source OWASP](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/03-Review_Webserver_Metafiles_for_Information_Leakage)
