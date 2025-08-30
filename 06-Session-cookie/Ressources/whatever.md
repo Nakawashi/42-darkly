@@ -3,7 +3,7 @@
 
 ## URL
 
-Pas d'url, mais on inspecte la page, voir plus bas la partie "Déchiffrer le flag".
+Pas d'url, mais on inspecte n'importe quelle page du site, voir plus bas la partie "Reproduire la faille".
 
 ## Description
 
@@ -34,12 +34,12 @@ Enfin, pour renforcer la sécurité, il est conseillé de lier les identifiants 
 
 ## Reproduire la faille et déchiffrer le flag
 
-Inspecter la page web
+Inspecter une page web
 
 FF : onglet stockage
-Chrome : onglet Application
+Chrome : onglet Storage
 
 On regarde les cookies, récupère la valeur pour I_am_admin : `68934a3e9455fa72420237eb05902327`
 Déchiffrer avec MD5 et on obtient **false**
-On chiffre **true** avec MDR et on obtient `b326b5062b2f0e69046810717534cb09`.
-On remplace l'ancienne valeur du cookie avec celle-ci et le flag s'affiche !
+On chiffre **true** avec MD5 et on obtient `b326b5062b2f0e69046810717534cb09`.
+On remplace l'ancienne valeur du cookie avec celle-ci, on navigue vers une autre page ou on recharge la page et le flag s'affiche dans une alert JS.
