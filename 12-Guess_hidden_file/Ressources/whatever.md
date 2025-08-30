@@ -2,8 +2,8 @@
 
 ## URL
 
-Première url trouvée : `/robots.txt`
-Url : `/.hidden`
+Première url trouvée avec le nom du dossier : `/robots.txt`
+Url : `/.hidden/`
 
 ## Description
 
