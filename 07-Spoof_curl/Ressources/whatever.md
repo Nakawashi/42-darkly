@@ -4,7 +4,9 @@
 ## URL
 
 Page du copyright (l'aigle)
-`/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f`
+```
+/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f
+```
 
 ## Description
 
@@ -39,9 +41,12 @@ Le HTTP response splitting est une vulnérabilité où un attaquant peut injecte
 
 ## Reproduire la faille
 
+Depuis la page d'accueil, cliquer sur l'image ronde avec l'aigle portant un casque audio avec ecrit `NATIONAL SECURITY AGENCY` puis cliquer sur `© BornToSec`. On doit arriver sur une page qui parle des Diomédéidés.</br>
+
 Inspecter la page et trouver le commentaire.
+
 Il est question du
-- Referer `https://www.nsa.gov`
+- Referer `https://www.nsa.gov` ('You must come from : "https://www.nsa.gov/".')
 - User-Agent `ft_bornToSec`
 
 On peut tester avec cURL en indiquant l'ip :
@@ -50,3 +55,5 @@ curl "http://<IP_ADDRESS>/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c
   --user-agent "ft_bornToSec" \
   --referer "https://www.nsa.gov/"
 ```
+
+Ou passer par l'extension modheader que j'ai installe sur Chrome de l'ecole.
