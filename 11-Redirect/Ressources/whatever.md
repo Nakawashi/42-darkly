@@ -18,7 +18,7 @@ La fonctionnalité de redirection du site permet à n'importe qui d'envoyer les 
 - **Encodage des URLs** : Vous pouvez également encoder les URLs de manière à empêcher la manipulation facile des paramètres.
 - **Informer l'utilisateur** : Avant de rediriger, assurez-vous que l'utilisateur est bien informé du site vers lequel il est dirigé, afin qu'il puisse prendre une décision éclairée.
 
-## ## Reproduire la faille
+## Reproduire la faille
 
 Inspecter les logos des réseaux sociaux.
 Le lien de redirection est visible côté frontend et rien ne nous empêche de le modifier.
