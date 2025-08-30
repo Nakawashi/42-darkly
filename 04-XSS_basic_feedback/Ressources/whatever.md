@@ -29,5 +29,5 @@ Cependant, aucun framework n'est infaillible, et des failles de sécurité peuve
 [Lien OWASP XSS Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
 
 ## Reproduire la faille
-On a écrit **script** dans le champ Message de ce formulaire.
+On a écrit **script** dans le champ Message de ce formulaire. Mettre un nom bidon.
 
