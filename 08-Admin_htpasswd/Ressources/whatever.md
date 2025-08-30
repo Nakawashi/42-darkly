@@ -25,7 +25,7 @@ Aussi, indiquer dans le fichier robots.txt le nom des fichiers sensibles les met
 
 ## ## Reproduire la faille
 
-acceder :
+acceder a :
 ```
 /whatever/htpasswd
 ```
