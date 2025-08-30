@@ -2,7 +2,13 @@
 
 ## URL
 
-`http://192.168.1.70/whatever/`
+`/robots.txt`
+```
+User-agent: *
+Disallow: /whatever <<--- celui-ci
+Disallow: /.hidden
+```
+
 
 ## Description
 
@@ -15,21 +21,23 @@ Cela signifie que l'on peut se connecter à des zones de notre serveur ou de nos
 ## Se protéger
 
 Faire rediriger ailleurs si un utilisateur tente d’accéder à un fichier non indexé.
+Aussi, indiquer dans le fichier robots.txt le nom des fichiers sensibles les mets en lumiere ce qui n'est pas tres malin.
 
 ## ## Reproduire la faille
-Comment on a trouvé : fichier connu et faisant partie de tous les sites, il fallait tester.
 
+acceder :
 ```
-Index of /whatever/
-
-../
-htpasswd                             29-Jun-2021 18:09                  38
+/whatever/htpasswd
 ```
-
-On télécharge le fichier, contenu : `root:437394baff5aa33daa618be47b75cb49`
+telecharge le fichier htpasswd qui contient :
+```
+root:437394baff5aa33daa618be47b75cb49
+```
 
 Le mot de passe dans ce fichier est chiffré en MD5.
-Accéder à cette URL http://192.168.1.70/admin/ (à tout hasard et parce qu’on est des génies)
+Accéder à cette URL http://<URL>/admin/ (à tout hasard et parce qu’on est des génies)
+login : root
+password : qwerty123@
 
 ## Déchiffrer le flag
-https://md5decrypt.net/#google_vignette pour déchiffrer le mot de passe `437394baff5aa33daa618be47b75cb49` ce qui nous donne `qwerty123@`
+[md5decrypt](https://md5decrypt.net/#google_vignette) pour déchiffrer le mot de passe `437394baff5aa33daa618be47b75cb49` ce qui nous donne `qwerty123@`
