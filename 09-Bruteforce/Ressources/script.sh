@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ip_address="192.168.1.70"
+ip_address="localhost:4242"
 
-password_file="rockyou.txt"
+password_file="wordlist.txt"
 
 while read password
 
