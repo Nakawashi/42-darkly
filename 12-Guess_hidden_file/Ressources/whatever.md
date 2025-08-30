@@ -25,10 +25,14 @@ Quelques idées pour éviter la faille :
 - **Utiliser une bonne gestion des permissions** : Veiller à ce que les fichiers contenant des informations sensibles soient protégés par des mécanismes d'authentification et que seuls les utilisateurs autorisés puissent y accéder.
 
 En résumé : restreindre l'accès aux fichiers sensibles et ne pas exposer des informations de manière aussi évidente.
+C'est pour alléger le nomber de requêtes reçues et protéger le serveur d'une surcharge.
 
-## ## Reproduire la faille
+## Reproduire la faille
 
-Via la page /robots.txt qui sert à indiquer aux robots des moteurs de recherches les urls qu'il peut scanner sur notre site. C'est pour alléger le nomber de requêtes reçues et protéger le serveur d'une surcharge.
+Via la page /robots.txt qui sert à indiquer aux robots des moteurs de recherches les urls qu'il peut scanner sur notre site, on trouve l'url du dossier :
+```
+http://localhost:4242/.hidden/
+```
 Il fallait trouver le flag parmi tout un tas de dossiers et sous-dossiers et fichiers. Un script bash nous a permi de trouver :
 FLAG trouvé dans http://192.168.1.70/.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README
 
