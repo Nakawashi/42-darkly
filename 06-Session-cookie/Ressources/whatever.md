@@ -45,7 +45,8 @@ On regarde les cookies, récupère la valeur pour I_am_admin :
 ```
 Déchiffrer avec MD5 et on obtient **false** </br>
 On chiffre **true** avec MD5 et on obtient 
-```b326b5062b2f0e69046810717534cb09
+```
+b326b5062b2f0e69046810717534cb09
 ```
 On remplace l'ancienne valeur du cookie avec celle-ci, on navigue vers une autre page ou on recharge la page et le flag s'affiche dans une alert JS.
 </br>
