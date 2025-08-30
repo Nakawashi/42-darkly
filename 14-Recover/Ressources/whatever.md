@@ -22,7 +22,7 @@ Voici quelques propositions pour se protéger des manipulations de paramètres w
 - Faire des tests d'injection, des audits de vulnérabilités
 
 
-## ## Reproduire la faille
+## Reproduire la faille
 
 Un champ caché se trouve sur la page de récupération de mot de passe. Il permet de définir une adresse email d'administrateur.
-Nous, on a inspecté la page et vu un `<input type=hidden ... >` avec comme valeur "webmaster", on en a déduis que c'était l'email qui allait recevoir le nouveau mot de passe.
+Nous, on a inspecté la page a partir du bouton `SUBMIT` et vu un `<input type=hidden ... >` avec comme valeur "webmaster", on en a déduis que c'était l'email qui allait recevoir le nouveau mot de passe.
