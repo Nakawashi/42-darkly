@@ -36,8 +36,8 @@ Préférer la méthode POST plutôt que GET pour ne pas afficher les paramètres
 ## Reproduire la faille
 
 On a testé d'ajouter un script JS comme paramètre pour voir s'il allait être interprété : `?page=media&src=data:text/html,<script>alert(1)</script>`
-Ce qui confirme que c'est bien le cas, mais pas de flag.
-On encode en base64 ce texte pour avoir :
+Ce qui confirme que c'est bien le cas car affiche bien 1 dans une alert msg. </br>
+On encode `<script>alert(1)</script>` en base64 ce texte pour retirer tout probleme lie aux caracteres speciaux :
 `?page=media&src=data:text/html;base64,ICA8c2NyaXB0PiBhbGVydCgxKTwvc2NyaXB0PiAg`
 Pourquoi base64 : ça permet d'avoir des caractères uniformes qui ne vont pas poser problème comme `=` ou `+` par exemple.
 Notre code est exécuté et nous renvoie le flag.
